@@ -6,7 +6,11 @@ public class Drawing extends Canvas implements Drawable {
     private Painter painter;
 
     public void setPainter(Painter painter) {
+        if (this.painter != null) {
+            removeKeyListener(this.painter);
+        }
         this.painter = painter;
+        addKeyListener(painter);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.km.sg.control;
 
 import com.km.sg.graphics.Drawable;
+import com.km.sg.graphics.Painter;
 import com.km.sg.painters.SplashScreen;
 
 public class State {
@@ -11,6 +12,8 @@ public class State {
     }
 
     void initialize() {
-        drawable.setPainter(new SplashScreen());
+        SplashScreen splashScreen = new SplashScreen();
+        drawable.setPainter(splashScreen);
+
     }
 }

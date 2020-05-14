@@ -1,7 +1,8 @@
 package com.km.sg.graphics;
 
 import java.awt.*;
+import java.awt.event.KeyListener;
 
-public interface Painter {
-    void paint(Graphics g);
+public abstract class Painter implements KeyListener {
+    public abstract void paint(Graphics g);
 }
