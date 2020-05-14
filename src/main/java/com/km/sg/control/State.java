@@ -1,8 +1,8 @@
 package com.km.sg.control;
 
+import com.km.sg.control.painters.GameScreen;
+import com.km.sg.control.painters.SplashScreen;
 import com.km.sg.graphics.Drawable;
-import com.km.sg.graphics.Painter;
-import com.km.sg.painters.SplashScreen;
 
 public class State {
     private Drawable drawable;
@@ -14,6 +14,13 @@ public class State {
     void initialize() {
         SplashScreen splashScreen = new SplashScreen();
         drawable.setPainter(splashScreen);
+        drawable.refresh();
+        splashScreen.waitForKey();
+    }
 
+    void game() {
+        GameScreen gameScreen = new GameScreen();
+        drawable.setPainter(gameScreen);
+        drawable.refresh();
     }
 }

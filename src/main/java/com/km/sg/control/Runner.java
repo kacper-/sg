@@ -12,5 +12,6 @@ public class Runner implements Runnable {
     @Override
     public void run() {
         state.initialize();
+        state.game();
     }
 }

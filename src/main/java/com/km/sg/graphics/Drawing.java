@@ -14,6 +14,11 @@ public class Drawing extends Canvas implements Drawable {
     }
 
     @Override
+    public void refresh() {
+        repaint();
+    }
+
+    @Override
     public void paint(Graphics g) {
         if (painter != null)
             painter.paint(g);
